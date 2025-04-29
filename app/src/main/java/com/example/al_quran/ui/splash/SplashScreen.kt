@@ -12,7 +12,7 @@ fun SplashScreen(navController: NavController) {
         Handler(Looper.getMainLooper()).postDelayed({
             val user = FirebaseAuth.getInstance().currentUser
             if (user != null) {
-                navController.navigate("surah_list") {
+                navController.navigate("surahlist") {
                     popUpTo("splash") { inclusive = true }
                 }
             } else {
